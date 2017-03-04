@@ -12,7 +12,6 @@ MarkupSafe==0.23
 oauthlib==1.1.2
 prettytable==0.7.2
 pyasn1==0.1.9
-pygobject==3.22.0
 PyJWT==1.4.1
 pyserial==3.1.1
 python-apt==1.1.0b5
