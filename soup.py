@@ -1,6 +1,7 @@
 from urllib.request import urlopen
 from urllib.request import HTTPError
 import re
+import sys
 
 from bs4 import BeautifulSoup
 
@@ -38,6 +39,7 @@ else:
         match = re.findall('.*listing/(.*)', plane['href'])
         if match:
             print(match[0])
+            sys.stdout.flush()
 
 # title = getitle("http://www.airfleets.net/listing/b787-2.htm")
 # if title is None:
