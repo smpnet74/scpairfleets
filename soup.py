@@ -31,7 +31,8 @@ def getplanes(url: object) -> object:
     return planeslinks
 
 planelinks = getplanes("http://www.airfleets.net/recherche/supported-plane.htm")
-f = open('workfile', 'w')
+size = sys.getsizeof(planelinks)
+print(size)
 
 if planelinks is None:
     print("Error: The location could not be found")
@@ -39,7 +40,7 @@ else:
     for plane in planelinks:
         match = re.findall('.*listing/(.*)', plane['href'])
         if match:
-            f.write(match[0])
+            print(match[0])
 
 # title = getitle("http://www.airfleets.net/listing/b787-2.htm")
 # if title is None:
