@@ -1,6 +1,5 @@
 from urllib.request import urlopen
 from urllib.request import HTTPError
-import boto3
 import re
 
 from bs4 import BeautifulSoup
