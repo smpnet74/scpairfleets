@@ -1,1 +1,1 @@
-worker:  python soup.py
+worker:  python3 soup.py
