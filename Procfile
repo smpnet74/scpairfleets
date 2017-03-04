@@ -1,1 +1,1 @@
-worker:  python3 soup.py
+worker:  python3.6 soup.py >> out
