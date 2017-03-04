@@ -1,7 +1,6 @@
 from urllib.request import urlopen
 from urllib.request import HTTPError
 import re
-import sys
 
 from bs4 import BeautifulSoup
 
@@ -31,8 +30,6 @@ def getplanes(url: object) -> object:
     return planeslinks
 
 planelinks = getplanes("http://www.airfleets.net/recherche/supported-plane.htm")
-size = sys.getsizeof(planelinks)
-print(size)
 
 if planelinks is None:
     print("Error: The location could not be found")
