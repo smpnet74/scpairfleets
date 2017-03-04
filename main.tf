@@ -50,7 +50,7 @@ resource "aws_instance" "os_master" {
     user_data = "${data.template_file.os_master_userdata.rendered}"
     vpc_security_group_ids = ["${aws_security_group.os_all_producers.id}"]
     tags {
-        Name = "os-master-${count.index}"
+        Name = "squid-master-${count.index}"
     }
     root_block_device {
       delete_on_termination = true

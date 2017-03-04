@@ -1,9 +1,14 @@
+import urllib
 from urllib.request import urlopen
 from urllib.request import HTTPError
+from urllib.request import URLError
 import re
 
 from bs4 import BeautifulSoup
 
+proxy_support = urllib.request.ProxyHandler({'http': '52.14.111.77:3128'})
+opener = urllib.request.build_opener(proxy_support)
+urllib.request.install_opener(opener)
 
 def getitle(url: object) -> object:
     try:
@@ -21,6 +26,8 @@ def getplanes(url: object) -> object:
     try:
         html = urlopen(url)
     except HTTPError as e:
+        return None
+    except URLError as e:
         return None
     try:
         bsObj = BeautifulSoup(html.read(), "html.parser")
