@@ -4,7 +4,6 @@ bs4==0.0.1
 chardet==2.3.0
 configobj==5.0.6
 cryptography==1.5
-distro-info===0.14build1
 idna==2.1
 Jinja2==2.8
 jsonpatch==1.10
